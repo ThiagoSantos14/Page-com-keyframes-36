@@ -1,0 +1,403 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    src: url(PressStart2P-Regular.ttf);
+    font-family: "pressstart";
+}
+
+body {
+    background-image: url(background-animado.gif);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+@keyframes degrade {
+    0% {
+        color: white;
+    }
+
+    30% {
+        color: yellow;
+    }
+
+    50% {
+        color: gray;
+    }
+
+    70% {
+        color: rgb(49, 153, 238);
+    }
+
+    100% {
+        color: black;
+    }
+}
+
+.titulo-keyframe {
+    margin-top: 1%;
+    display: flex;
+    justify-content: center;
+    font-family: "pressstart";
+    font-size: 30px;
+    animation: degrade;
+    animation-duration: 20s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 1s;
+    animation-iteration-count: infinite;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height: 90vh;
+    flex-grow: 2;
+}
+
+.conteudo {
+    position: relative;
+    display: flex;
+    width: 450px;
+    height: 570px;
+    overflow: hidden;
+    margin-top: 5%;
+    border-radius: 30px;
+    box-shadow: yellow 10px 10px 30px;
+}
+
+.conteudo:hover {
+    transform: scale(0.9);
+    transition: all 0.9s;
+}
+
+.conteudo span:nth-of-type(1) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(to right, transparent, yellow);
+    animation: borda1 infinite;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+}
+
+.conteudo span:nth-of-type(2) {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 5px;
+    height: 100%;
+    background: linear-gradient(to bottom, transparent, yellow);
+    animation: borda2 infinite;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+}
+
+.conteudo span:nth-of-type(3) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 5px;
+    height: 100%;
+    background: linear-gradient(to top, transparent, yellow);
+    animation: borda3 infinite;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out; 
+}
+
+.conteudo span:nth-of-type(4) {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(to left, transparent, yellow);
+    animation: borda4 infinite;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes borda1 {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+@keyframes borda2 {
+    0% {
+        transform: translateY(-100%);
+    }
+
+    100% {
+        transform: translateY(100%);
+    }
+}
+
+@keyframes borda3 {
+    0% {
+        transform: translateY(-100%);
+    }
+
+    100% {
+        transform: translateY(100%);
+    }
+}
+
+@keyframes borda4 {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+.rodape {
+    height: 100vh;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    font-family: "pressstart";
+    margin-bottom: 1%;
+    animation: rodape infinite;
+    animation-duration: 20s;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes rodape {
+    0% {
+        color: white;
+    }
+
+    30% {
+        color: yellow;
+    }
+
+    50% {
+        color: gray;
+    }
+
+    70% {
+        color: rgb(49, 153, 238);
+    }
+
+    100% {
+        color: black;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        background-image: url(background-animado.gif);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+    }
+
+    .titulo-keyframe {
+        font-size: 20px;
+        margin-top: 2%;
+        margin-bottom: 5%;
+    }
+
+    .conteudo {
+        width: 300px;
+        height: 500px;
+        margin-bottom: 10%;
+    }
+
+    .rodape {
+        height: 310vh;
+        align-items: flex-end;
+        white-space: nowrap;
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 600px) {
+    body {
+        background-image: url(background-animado.gif);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+    }
+
+    .titulo-keyframe {
+        margin-bottom: 5%;
+    }
+
+    .rodape {
+        height: 480vh;
+        align-items: flex-end;
+    }
+}
+
+@media (min-width: 601px) and (max-width: 768px) {
+    body {
+        background-image: url(background-animado.gif);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+    }
+
+    .titulo-keyframe {
+        margin-bottom: 5%;
+    }
+
+    .rodape {
+        height: 490vh;
+        align-items: flex-end;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 800px) {
+    body {
+        background-image: url(background-animado.gif);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+    }
+
+    .titulo-keyframe {
+        margin-bottom: 5%;
+    }
+
+    .rodape {
+        height: 490vh;
+        align-items: flex-end;
+    }
+}
+
+@media (min-width: 801px) and (max-width: 1024px) {
+    body {
+        background-image: url(background-animado.gif);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+    }
+
+    .titulo-keyframe {
+        margin-bottom: 5%;
+    }
+
+    .rodape {
+        height: 220vh;
+        align-items: flex-end;
+    }
+}
+
+@media (min-width: 1025px) and (max-width: 1291px) {
+    body {
+        background-image: url(background-animado.gif);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+    }
+
+    .titulo-keyframe {
+        margin-bottom: 5%;
+    }
+
+    .conteudo {
+        margin-top: 10%;
+    }
+
+    .rodape {
+        height: 200vh;
+        align-items: flex-end;
+    }
+}
+
+@media (min-width: 1291px) and (max-width: 1367px) {
+    body {
+        background-image: url(background-animado.gif);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+    }
+
+    .titulo-keyframe {
+        margin-bottom: 5%;
+    }
+
+    .conteudo {
+        width: 30%;
+        margin-top: 10%;
+    }
+
+    .rodape {
+        margin-top: 10%;
+    }
+}
+
+@media (min-width: 1367px) and (max-width: 1440px) {
+    body {
+        background-image: url(background-animado.gif);
+        background-repeat: no-repeat;
+        background-size: 100% 100%; 
+    }
+
+    .titulo-keyframe {
+        margin-bottom: 5%;
+    }
+
+    .conteudo {
+        width: 400px;
+    }
+
+    .rodape {
+        margin-top: -10%;
+    }
+}
+
+
+@media (min-width: 1441px) and (max-width: 1920px) {
+    body {
+        background-image: url(background-animado.gif);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+    }
+
+    .conteudo {
+        width: 35%;
+        height: 85%;
+        margin-top: 7%;
+    }
+
+    iframe {
+        width: 100%;
+        height: 100%;
+        margin-top: auto;
+    }
+
+    .rodape {
+        height: 200vh;
+        align-items: flex-end;
+    }
+}
+
+@media (min-width: 1921px) and (max-width: 3840px) {
+    .titulo-keyframe {
+        font-size: 100px;
+    }
+
+    .conteudo {
+        width: 40%;
+        height: 55%;
+    }
+
+    iframe {
+        width: 100%;
+        height: 100%;
+    }
+
+    .rodape {
+        font-size: 50px;
+    }
+}
+
